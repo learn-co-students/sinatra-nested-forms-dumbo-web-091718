@@ -1,4 +1,5 @@
 require './environment'
+require 'pry'
 
 module FormsLab
   class App < Sinatra::Base
@@ -8,8 +9,13 @@ module FormsLab
       "Welcome to the Nested Forms Lab! let's navigate to the '/new'"
     end
 
-    get "/pirates" do
-      erb :new
+    get '/new' do
+
+      erb :'pirates/new'
+    end
+
+    post "/pirates" do
+      erb :'pirates/show'
     end
   end
 end
